@@ -6,6 +6,7 @@ function setSessionStorage() {
     document.getElementById('session-output').innerText = `Data set: Name = ${name}, Age = ${age}`;
 }
 
+// Function to get data from session storage
 function getSessionStorage() {
     const name = sessionStorage.getItem('name');
     const age = sessionStorage.getItem('age');
@@ -16,7 +17,7 @@ function getSessionStorage() {
     }
 }
 
-
+// Function to clear all data from session storage
 function clearSessionStorage() {
     sessionStorage.clear();
     document.getElementById('session-output').innerText = 'Session storage cleared.';
