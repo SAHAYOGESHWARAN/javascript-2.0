@@ -1,3 +1,12 @@
 let str = " i have a bike";
 
-console.log(str.trimStart().trimEnd().padStart(str.length -3,'-').padEnd(str.length,'-'));
+
+let trimmedStr = str.trimStart().trimEnd();
+
+
+let totalPaddingLength = str.length - trimmedStr.length;
+
+
+let paddedStr = trimmedStr.padStart(trimmedStr.length + totalPaddingLength, '-').padEnd(str.length, '-');
+
+console.log(paddedStr);
