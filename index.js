@@ -1,21 +1,27 @@
 window.onload = function () {
-    const elementmain = document.getElementById("main");
-    elementmain.style.color = "red";
-  
-    const clickHandle = e => {
-        console.log(e.target.innerHTML);
-    };
-   
-    const buttons = document.querySelectorAll("button");
-
-    buttons.forEach(eachButton => {
-        eachButton.addEventListener("click", clickHandle);
-    });
-
-    setTimeout(() => {
-        console.log('removed');
-        buttons.forEach(eachButton => {
-            eachButton.removeEventListener("click", clickHandle);
-        });
-    }, 10000);
-};
+    const main = document.getElementById('main'); // Corrected to use string 'main'
+    const one =  document.getElementById('one');  // Changed to correct ID 'one'
+    const two =  document.getElementById('two');  // Changed to correct ID 'two'
+    const body = document.querySelector('body');
+    if (main) {
+        main.addEventListener('click', e => {
+            console.log('main clicked');
+        },true);
+    }
+ 
+    if (one) {
+        one.addEventListener('click', e => {
+            console.log('one clicked');
+        },true);
+    }
+ 
+    if (two) {
+        two.addEventListener('click', e => {
+            console.log('two clicked');
+        },true);
+    body.addEventListener('click',e=>{
+        console.log('body clicked');
+    },true);
+    }
+ };
+ 
